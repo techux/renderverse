@@ -4,6 +4,7 @@ require("dotenv").config();
 const dbConnect = require("./utils/dbConnect");
 
 const authRoute = require("./routes/auth.routes");
+const testimonialRoute = require("./routes/testimonial.routes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRoute);
+app.use("/testimonial", testimonialRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
