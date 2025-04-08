@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
+const dbConnect = require("./utils/dbConnect");
 
 const app = express();
 
@@ -19,4 +20,5 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  dbConnect();
 });
