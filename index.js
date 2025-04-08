@@ -11,6 +11,7 @@ const contactRoute = require("./routes/contact.routes");
 const serviceRoute = require("./routes/service.routes");
 const productRoute = require("./routes/product.routes");
 const blogRoute = require("./routes/blog.routes");
+const jobRoute = require("./routes/job.routes");
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use("/contact", contactRoute);
 app.use("/service", serviceRoute);
 app.use("/product", productRoute);
 app.use("/blog", blogRoute);
+app.use("/job", jobRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
