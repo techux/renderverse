@@ -6,6 +6,7 @@ const dbConnect = require("./utils/dbConnect");
 const authRoute = require("./routes/auth.routes");
 const testimonialRoute = require("./routes/testimonial.routes");
 const teamRoute = require("./routes/team.routes");
+const partnerRoute = require("./routes/partner.routes");
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRoute);
 app.use("/testimonial", testimonialRoute);
 app.use("/team", teamRoute);
+app.use("/partner", partnerRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
