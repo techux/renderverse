@@ -3,6 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 const dbConnect = require("./utils/dbConnect");
 
+const authRoute = require("./routes/auth.routes");
+
 const app = express();
 
 app.use(express.json());
@@ -17,6 +19,8 @@ app.get("/", (req, res) => {
     message: "Welcome to the API",
   });
 });
+
+app.use("/auth", authRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
