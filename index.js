@@ -10,6 +10,7 @@ const partnerRoute = require("./routes/partner.routes");
 const contactRoute = require("./routes/contact.routes");
 const serviceRoute = require("./routes/service.routes");
 const productRoute = require("./routes/product.routes");
+const blogRoute = require("./routes/blog.routes");
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use("/partner", partnerRoute);
 app.use("/contact", contactRoute);
 app.use("/service", serviceRoute);
 app.use("/product", productRoute);
+app.use("/blog", blogRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
